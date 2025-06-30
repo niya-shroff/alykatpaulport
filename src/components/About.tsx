@@ -34,7 +34,7 @@ export default function About() {
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
               Hi, I'm Aly! I'm a Malaysian student studying Biotechnology in Berlin. While I'm passionate about STEM, 
               I'm also a creative at heart—I love expressing myself through music, videos, and writing. For me, it's 
-              all about telling real stories and connecting with people in a meaningful way.
+              all about telling real stories and connecting with people in a meaningful way!
             </p>
           </div>
         </div>
