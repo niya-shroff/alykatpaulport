@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Youtube, Camera, BookOpen, ExternalLink, Play, Eye, Heart, Clock, Radio, Instagram, MapPin, Star } from 'lucide-react';
+import { Music, Youtube, Camera, BookOpen, ExternalLink, Play, Eye, Heart, Clock, Radio, Instagram, MapPin, Star, Users } from 'lucide-react';
 
 export default function ContentSections() {
   const recentVideos = [
@@ -178,7 +178,7 @@ export default function ContentSections() {
           </div>
 
          {/* Stats */}
-        <div className="bg-gradient-to-r from-red-100 to-red-50 rounded-3xl p-8 md:p-12 border border-red-200">
+        <div className="bg-gradient-to-r from-red-100 to-red-50 rounded-3xl p-8 md:p-12 border border-red-200 mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
@@ -196,7 +196,7 @@ export default function ContentSections() {
             </div>
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Video className="w-8 h-8 text-red-600" />
+                <Camera className="w-8 h-8 text-red-600" />
               </div>
               <div className="text-3xl font-bold text-gray-800 mb-2">1K+</div>
               <div className="text-gray-600">Content Pieces</div>
