@@ -38,13 +38,6 @@ export default function CrochetSection() {
       time: '2-3 weeks'
     },
     {
-      title: 'Amigurumi Animals',
-      description: 'Cute stuffed animals and characters',
-      image: 'https://images.pexels.com/photos/7005538/pexels-photo-7005538.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Advanced',
-      time: '1-2 weeks'
-    },
-    {
       title: 'Fashion Accessories',
       description: 'Stylish bags, hats, and scarves',
       image: 'https://images.pexels.com/photos/6069113/pexels-photo-6069113.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -58,20 +51,6 @@ export default function CrochetSection() {
       difficulty: 'Intermediate',
       time: '1-2 weeks'
     },
-    {
-      title: 'Baby Items',
-      description: 'Soft and safe items for little ones',
-      image: 'https://images.pexels.com/photos/7005539/pexels-photo-7005539.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Beginner',
-      time: '1 week'
-    },
-    {
-      title: 'Seasonal Decorations',
-      description: 'Holiday and seasonal themed pieces',
-      image: 'https://images.pexels.com/photos/6069110/pexels-photo-6069110.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Intermediate',
-      time: '2-4 days'
-    }
   ];
 
   const getDifficultyColor = (difficulty: string) => {
