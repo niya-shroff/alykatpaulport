@@ -85,7 +85,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-gray-300 text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 Aly Paul. All rights reserved.
+            © 2025 SmileWithMe Productions. All rights reserved.
           </p>
         </div>
       </div>
