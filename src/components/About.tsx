@@ -23,7 +23,7 @@ export default function About() {
     },
     {
       icon: PenTool,
-      title: 'Travel Blogging',
+      title: 'Travel Blog',
       description: 'Documenting adventures and sharing travel insights through captivating stories and photography.',
       color: 'bg-blue-100 text-blue-600 border-blue-200'
     },
