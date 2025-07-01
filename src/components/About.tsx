@@ -11,7 +11,7 @@ export default function About() {
     },
     {
       icon: Camera,
-      title: 'UGC Creation',
+      title: 'UGC Content',
       description: 'Crafting authentic user-generated content for brands, turning products into compelling stories.',
       color: 'bg-pink-100 text-pink-600 border-pink-200'
     },
