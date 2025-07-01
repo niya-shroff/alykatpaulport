@@ -105,8 +105,6 @@ export default function CrochetSection() {
         <div className="mb-20">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3 border border-pink-200">
-              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
