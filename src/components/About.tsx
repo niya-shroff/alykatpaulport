@@ -4,6 +4,12 @@ import { Music, Camera, PenTool, Heart, Users, Video, Microscope } from 'lucide-
 export default function About() {
   const passions = [
     {
+      icon: Microscope,
+      title: 'Biotechnology',
+      description: 'Studying the fascinating world of biotechnology and its applications in modern science.',
+      color: 'bg-green-100 text-green-600 border-green-200'
+    },
+    {
       icon: Camera,
       title: 'UGC Creation',
       description: 'Crafting authentic user-generated content for brands, turning products into compelling stories.',
@@ -20,12 +26,6 @@ export default function About() {
       title: 'Travel Blogging',
       description: 'Documenting adventures and sharing travel insights through captivating stories and photography.',
       color: 'bg-blue-100 text-blue-600 border-blue-200'
-    },
-    {
-      icon: Microscope,
-      title: 'Biotechnology',
-      description: 'Studying the fascinating world of biotechnology and its applications in modern science.',
-      color: 'bg-green-100 text-green-600 border-green-200'
     },
     {
       icon: Heart,
@@ -59,7 +59,7 @@ export default function About() {
             {passions.map((passion, index) => (
               <div
                 key={index}
-                className={`group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border ${passion.color}`}
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200"
               >
                 <div className={`w-16 h-16 rounded-2xl ${passion.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <passion.icon className="w-8 h-8" />
