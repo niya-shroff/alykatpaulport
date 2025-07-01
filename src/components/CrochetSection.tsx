@@ -1,10 +1,11 @@
 import React from 'react';
-import { School as Spool, Palette, Gift, Star, ExternalLink, ShoppingBag, Camera } from 'lucide-react';
+import { Palette, Gift, Star, ExternalLink, ShoppingBag, Camera } from 'lucide-react';
+import YarnBallIcon from './YarnBallIcon';
 
 export default function CrochetSection() {
   const crochetSkills = [
     {
-      icon: Spool,
+      icon: YarnBallIcon,
       title: 'Amigurumi',
       description: 'Creating adorable stuffed animals and characters with intricate details',
       color: 'bg-pink-100 text-pink-600 border-pink-200'
@@ -22,7 +23,7 @@ export default function CrochetSection() {
       color: 'bg-rose-100 text-rose-600 border-rose-200'
     },
     {
-      icon: Spool,
+      icon: YarnBallIcon,
       title: 'Pattern Design',
       description: 'Creating original patterns and sharing techniques with the community',
       color: 'bg-indigo-100 text-indigo-600 border-indigo-200'
@@ -90,7 +91,7 @@ export default function CrochetSection() {
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mr-4 border border-rose-200">
-              <Spool className="w-8 h-8 text-rose-600" />
+              <YarnBallIcon className="w-8 h-8 text-rose-600" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crochet Creations</h2>
           </div>
@@ -106,7 +107,7 @@ export default function CrochetSection() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <div className="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center mr-3 border border-rose-200">
-                <Spool className="w-4 h-4 text-rose-600" />
+                <YarnBallIcon className="w-4 h-4 text-rose-600" />
               </div>
               <h3 className="text-3xl font-bold text-gray-800">Skills & Techniques</h3>
             </div>
@@ -160,7 +161,7 @@ export default function CrochetSection() {
                     </span>
                   </div>
                   <div className="absolute top-4 right-4">
-                    <Spool className="w-5 h-5 text-white opacity-80" />
+                    <YarnBallIcon className="w-5 h-5 text-white opacity-80" />
                   </div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex items-center text-sm">
@@ -187,7 +188,7 @@ export default function CrochetSection() {
 
         {/* Therapeutic Benefits */}
         <div className="bg-gradient-to-br from-rose-500 to-pink-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-rose-400 mb-16">
-          <Spool className="w-16 h-16 mx-auto mb-6 opacity-80" />
+          <YarnBallIcon className="w-16 h-16 mx-auto mb-6 opacity-80" />
           <h3 className="text-3xl font-bold mb-4">The Art of Mindful Making</h3>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Crochet is more than just a hobby—it's a form of meditation that brings peace, 
@@ -196,7 +197,7 @@ export default function CrochetSection() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Spool className="w-8 h-8 mx-auto mb-2 opacity-80" />
+              <YarnBallIcon className="w-8 h-8 mx-auto mb-2 opacity-80" />
               <h4 className="font-semibold mb-1">Stress Relief</h4>
               <p className="text-sm opacity-90">Meditative and calming</p>
             </div>
@@ -225,7 +226,7 @@ export default function CrochetSection() {
             href="#contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-rose-600 to-pink-600 text-white font-semibold rounded-full hover:from-rose-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            <Spool className="w-5 h-5 mr-2" />
+            <YarnBallIcon className="w-5 h-5 mr-2" />
             Commission a Piece
           </a>
         </div>
