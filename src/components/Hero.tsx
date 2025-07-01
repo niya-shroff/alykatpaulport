@@ -4,8 +4,17 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
-  const fullText = 'Creative Content Creator';
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
+
+  const phrases = [
+    'Content Creator',
+    'Studying Biotech',
+    'Songwriting',
+    'Blogging',
+    'Crocheting'
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -14,18 +23,54 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
+    const currentPhrase = phrases[currentPhraseIndex];
     let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypewriterText(fullText.slice(0, currentIndex));
+    let typingInterval: NodeJS.Timeout;
+    let pauseTimeout: NodeJS.Timeout;
+
+    const typeText = () => {
+      if (currentIndex <= currentPhrase.length) {
+        setTypewriterText(currentPhrase.slice(0, currentIndex));
         currentIndex++;
       } else {
-        setIsTypingComplete(true);
         clearInterval(typingInterval);
+        setIsTyping(false);
+        
+        // Pause before starting to delete
+        pauseTimeout = setTimeout(() => {
+          deleteText();
+        }, 2000);
       }
-    }, 100);
+    };
 
-    return () => clearInterval(typingInterval);
+    const deleteText = () => {
+      if (currentIndex > 0) {
+        setTypewriterText(currentPhrase.slice(0, currentIndex - 1));
+        currentIndex--;
+        setTimeout(deleteText, 50);
+      } else {
+        setIsTyping(true);
+        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+      }
+    };
+
+    if (isTyping) {
+      typingInterval = setInterval(typeText, 100);
+    }
+
+    return () => {
+      clearInterval(typingInterval);
+      clearTimeout(pauseTimeout);
+    };
+  }, [currentPhraseIndex, isTyping]);
+
+  // Cursor blinking effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
   }, []);
 
   const scrollToAbout = () => {
@@ -70,11 +115,15 @@ export default function Hero() {
               <Sparkles className="w-8 h-8 text-red-500 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
             </div>
-            <span className="text-red-600 font-medium">
+            <span className="text-red-600 font-medium min-h-[24px] flex items-center">
               {typewriterText}
-              {!isTypingComplete && (
-                <span className="animate-pulse text-red-600 ml-1">|</span>
-              )}
+              <span 
+                className={`ml-1 text-red-600 transition-opacity duration-100 ${
+                  showCursor ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                |
+              </span>
             </span>
           </div>
           
