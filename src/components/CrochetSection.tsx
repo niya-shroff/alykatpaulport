@@ -5,12 +5,6 @@ import YarnBallIcon from './YarnBallIcon';
 export default function CrochetSection() {
   const crochetSkills = [
     {
-      icon: YarnBallIcon,
-      title: 'Amigurumi',
-      description: 'Creating adorable stuffed animals and characters with intricate details',
-      color: 'bg-pink-100 text-pink-600 border-pink-200'
-    },
-    {
       icon: Palette,
       title: 'Color Work',
       description: 'Mastering complex color patterns and gradient techniques',
@@ -32,20 +26,6 @@ export default function CrochetSection() {
 
   const crochetProjects = [
     {
-      title: 'Cozy Blankets',
-      description: 'Handmade blankets with intricate stitch patterns',
-      image: 'https://images.pexels.com/photos/6069112/pexels-photo-6069112.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Intermediate',
-      time: '2-3 weeks'
-    },
-    {
-      title: 'Amigurumi Animals',
-      description: 'Cute stuffed animals and characters',
-      image: 'https://images.pexels.com/photos/7005538/pexels-photo-7005538.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Advanced',
-      time: '1-2 weeks'
-    },
-    {
       title: 'Fashion Accessories',
       description: 'Stylish bags, hats, and scarves',
       image: 'https://images.pexels.com/photos/6069113/pexels-photo-6069113.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -58,13 +38,6 @@ export default function CrochetSection() {
       image: 'https://images.pexels.com/photos/6069111/pexels-photo-6069111.jpeg?auto=compress&cs=tinysrgb&w=600',
       difficulty: 'Intermediate',
       time: '1-2 weeks'
-    },
-    {
-      title: 'Baby Items',
-      description: 'Soft and safe items for little ones',
-      image: 'https://images.pexels.com/photos/7005539/pexels-photo-7005539.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Beginner',
-      time: '1 week'
     },
     {
       title: 'Seasonal Decorations',
