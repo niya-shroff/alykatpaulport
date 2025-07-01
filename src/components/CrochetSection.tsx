@@ -93,7 +93,7 @@ export default function CrochetSection() {
             <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mr-4 border border-rose-200">
               <YarnBallIcon className="w-8 h-8 text-rose-600" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crochet Creations</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crocheting</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Discover the therapeutic art of crochet through my handmade creations. From cozy blankets 
@@ -101,47 +101,14 @@ export default function CrochetSection() {
             warmth and happiness to everyday life.
           </p>
         </div>
-
-        {/* Skills & Techniques */}
-        <div className="mb-20">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center mr-3 border border-rose-200">
-                <YarnBallIcon className="w-4 h-4 text-rose-600" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-800">Skills & Techniques</h3>
-            </div>
-            <p className="text-lg text-gray-600">Mastering various crochet techniques and styles</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {crochetSkills.map((skill, index) => (
-              <div
-                key={index}
-                className={`group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border ${skill.color}`}
-              >
-                <div className={`w-12 h-12 rounded-xl ${skill.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <skill.icon className="w-6 h-6" />
-                </div>
-                <h4 className="text-lg font-bold text-gray-800 mb-3">{skill.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{skill.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Project Gallery */}
         <div className="mb-20">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3 border border-pink-200">
-                <Camera className="w-4 h-4 text-pink-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-800">Project Gallery</h3>
             </div>
-            <p className="text-lg text-gray-600">A showcase of my favorite crochet creations</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {crochetProjects.map((project, index) => (
               <div
