@@ -32,11 +32,11 @@ export default function About() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              Hi, I'm Aly! I'm a Malaysian student studying Biotechnology in Berlin. 
+              Hi, I'm Aly! I'm a Malaysian student studying Biotechnology at 
+              the Berlin University of Applied Science and Technology in Germany.
               While I'm passionate about STEM, I'm also a creative at heart—I love 
-              expressing myself through music, videos, and writing. For me, it's 
-              all about telling real stories and connecting with people in a meaningful
-              way!
+              expressing myself through music, photography, content creation, writing 
+              and crocheting.
             </p>
           </div>
         </div>
