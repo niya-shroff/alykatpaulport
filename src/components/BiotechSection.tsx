@@ -73,9 +73,6 @@ export default function BiotechSection() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 border border-green-200">
-                <Award className="w-4 h-4 text-green-600" />
-              </div>
             </div>
           </div>
 
