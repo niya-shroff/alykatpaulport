@@ -143,7 +143,8 @@ export default function Hero() {
               transform: `translateY(${scrollY * -0.08}px)`
             }}
           >
-            Singer, YouTuber, UGC Creator & Travel Blogger bringing authentic stories to life through music, video, and written word.
+            Berlin based student, singer, youtuber, UGC creator, and travel blogger bringing authentic 
+            stories to life through music, video, and written word.
           </p>
           
           <div 
