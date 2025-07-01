@@ -6,7 +6,7 @@ export default function About() {
     {
       icon: Microscope,
       title: 'Biotechnology',
-      description: 'Studying the fascinating world of biotechnology and its applications in modern science through hands-on labs and research experiences.',
+      description: 'Studying the fascinating world of biotechnology and its applications in modern science through hands-on labs.',
       color: 'bg-green-100 text-green-600 border-green-200'
     },
     {
