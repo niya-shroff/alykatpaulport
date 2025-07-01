@@ -74,7 +74,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:contact@alykatpaul.me"
-                className="flex items-center justify-center w-full h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg hover:scale-105 transition-all duration-200"
+                className="flex items-center justify-center w-full h-12 bg-sky-300 hover:bg-sky-400 text-white rounded-lg hover:scale-105 transition-all duration-200"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 <span className="text-sm font-medium">Email</span>
