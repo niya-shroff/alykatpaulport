@@ -1,6 +1,5 @@
 import React from 'react';
-import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope } from 'lucide-react';
-import YarnBallIcon from './YarnBallIcon';
+import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, Spool } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -41,7 +40,7 @@ export default function Footer() {
                 Blog
               </a>
               <a href="#crocheting" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
-                <YarnBallIcon className="w-4 h-4 mr-2" />
+                <Spool className="w-4 h-4 mr-2" />
                 Crochet
               </a>
               <a href="#contact" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">

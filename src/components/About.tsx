@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Camera, PenTool, Microscope, Scissors } from 'lucide-react';
+import { Music, Camera, PenTool, Microscope, Spool } from 'lucide-react';
 
 export default function About() {
   const passions = [
@@ -28,7 +28,7 @@ export default function About() {
       color: 'bg-blue-100 text-blue-600 border-blue-200'
     },
     {
-      icon: Scissors,
+      icon: Spool,
       title: 'Crocheting',
       description: 'Creating beautiful handmade pieces and sharing the therapeutic art of crochet.',
       color: 'bg-rose-100 text-rose-600 border-rose-200'

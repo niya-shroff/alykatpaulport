@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Music, Camera, BookOpen, Mail, Microscope } from 'lucide-react';
-import SpoolIcon from './SpoolIcon';
+import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Spool } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +10,7 @@ export default function Header() {
     { name: 'Music', href: '#music', icon: Music },
     { name: 'UGC', href: '#ugc', icon: Camera },
     { name: 'Blog', href: '#blog', icon: BookOpen },
-    { name: 'Crochet', href: '#crocheting', icon: SpoolIcon },
+    { name: 'Crochet', href: '#crocheting', icon: Spool },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
