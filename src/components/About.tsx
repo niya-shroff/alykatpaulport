@@ -70,33 +70,6 @@ export default function About() {
             ))}
           </div>
         </div>
-
-        {/* Stats */}
-        <div className="bg-gradient-to-r from-red-100 to-red-50 rounded-3xl p-8 md:p-12 border border-red-200">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Users className="w-8 h-8 text-red-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">3K+</div>
-              <div className="text-gray-600">Instagram Followers</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Heart className="w-8 h-8 text-red-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">500+</div>
-              <div className="text-gray-600">Happy Clients</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Video className="w-8 h-8 text-red-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">1K+</div>
-              <div className="text-gray-600">Content Pieces</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
