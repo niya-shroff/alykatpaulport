@@ -30,7 +30,7 @@ export default function About() {
     {
       icon: Heart,
       title: 'Crocheting',
-      description: 'Creating beautiful handmade pieces for commission while sharing the beautiful and therapeutic art of crochet.',
+      description: 'Creating beautiful handmade pieces for commission while sharing the beautiful art of crochet.',
       color: 'bg-rose-100 text-rose-600 border-rose-200'
     }
   ];
