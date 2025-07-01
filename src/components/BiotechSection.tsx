@@ -156,7 +156,6 @@ export default function BiotechSection() {
                 ))}
               </div>
             </div>
-
             {/* Course Counter */}
             <div className="text-center mt-6">
               <span className="text-sm text-gray-500">
