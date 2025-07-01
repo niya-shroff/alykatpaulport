@@ -130,9 +130,9 @@ export default function ContentSections() {
   return (
     <>
       {/* UGC Section */}
-      <section id="ugc" className="py-20 bg-white">
+      <section id="ugc" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 border border-pink-200">
@@ -177,36 +177,36 @@ export default function ContentSections() {
             </div>
           </div>
 
-         {/* Stats */}
-        <div className="bg-gradient-to-r from-red-100 to-red-50 rounded-3xl p-8 md:p-12 border border-red-200 mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Users className="w-8 h-8 text-red-600" />
+          {/* Stats */}
+          <div className="bg-gradient-to-r from-red-100 to-red-50 rounded-3xl p-8 md:p-12 border border-red-200 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
+                  <Users className="w-8 h-8 text-red-600" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">3K+</div>
+                <div className="text-gray-600">Instagram Followers</div>
               </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">3K+</div>
-              <div className="text-gray-600">Instagram Followers</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Heart className="w-8 h-8 text-red-600" />
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
+                  <Heart className="w-8 h-8 text-red-600" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">500+</div>
+                <div className="text-gray-600">Happy Clients</div>
               </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">500+</div>
-              <div className="text-gray-600">Happy Clients</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
-                <Camera className="w-8 h-8 text-red-600" />
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4 border border-red-300">
+                  <Camera className="w-8 h-8 text-red-600" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">1K+</div>
+                <div className="text-gray-600">Content Pieces</div>
               </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">1K+</div>
-              <div className="text-gray-600">Content Pieces</div>
             </div>
           </div>
-        </div>
 
           {/* UGC Portfolio Examples */}
           <div className="mb-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">Brand Collaborations</h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 I've had the privilege of working with amazing brands across various industries, 
@@ -249,10 +249,10 @@ export default function ContentSections() {
       </section>
 
       {/* Combined Music Section */}
-      <section id="music" className="py-20 bg-gray-50">
+      <section id="music" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4 border border-purple-200">
                 <Music className="w-8 h-8 text-purple-600" />
@@ -291,7 +291,7 @@ export default function ContentSections() {
 
           {/* SoundCloud Tracks Section */}
           <div className="mb-20">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3 border border-orange-200">
                   <Radio className="w-4 h-4 text-orange-600" />
@@ -364,7 +364,7 @@ export default function ContentSections() {
 
           {/* YouTube Videos Section */}
           <div>
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3 border border-red-200">
                   <Youtube className="w-4 h-4 text-red-600" />
@@ -425,10 +425,10 @@ export default function ContentSections() {
       </section>
 
       {/* Enhanced Blog & Photography Section */}
-      <section id="blog" className="py-20 bg-white">
+      <section id="blog" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4 border border-blue-200">
                 <BookOpen className="w-8 h-8 text-blue-600" />
@@ -467,7 +467,7 @@ export default function ContentSections() {
 
           {/* Photography Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3 border border-pink-200">
                   <Camera className="w-4 h-4 text-pink-600" />

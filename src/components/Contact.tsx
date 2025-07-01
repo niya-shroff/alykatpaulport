@@ -56,9 +56,9 @@ export default function Contact() {
   const isCrochet = form.contactType === 'crochet';
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Let's Work Together
           </h2>
@@ -68,7 +68,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-3xl p-8 shadow-lg border border-gray-200">
+        <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
           <form 
             onSubmit={handleSubmit} 
             className="space-y-6"

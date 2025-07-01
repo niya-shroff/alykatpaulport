@@ -3,8 +3,8 @@ import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, He
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 text-gray-800 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-white text-gray-800 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent mb-4">
@@ -23,6 +23,10 @@ export default function Footer() {
                 <User className="w-4 h-4 mr-2" />
                 About
               </a>
+              <a href="#biotechnology" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Microscope className="w-4 h-4 mr-2" />
+                Biotech
+              </a>
               <a href="#music" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Music className="w-4 h-4 mr-2" />
                 Music
@@ -34,10 +38,6 @@ export default function Footer() {
               <a href="#blog" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Blog
-              </a>
-              <a href="#biotechnology" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
-                <Microscope className="w-4 h-4 mr-2" />
-                Biotech
               </a>
               <a href="#crocheting" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Heart className="w-4 h-4 mr-2" />
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-300 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-300 text-center">
           <p className="text-gray-500 text-sm">
             © 2025 SmileWithMe Productions. All rights reserved.
           </p>

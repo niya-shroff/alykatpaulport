@@ -36,14 +36,14 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
             About Me
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+            <p className="text-xl text-gray-600 leading-relaxed">
               Hi, I'm Aly! I'm a Malaysian student studying Biotechnology at 
               the Berlin University of Applied Science and Technology in Germany.
               While I'm passionate about STEM, I'm also a creative at heart—I love 
@@ -55,21 +55,19 @@ export default function About() {
         </div>
 
         {/* Creative Passions */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {passions.map((passion, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200"
-              >
-                <div className={`w-16 h-16 rounded-2xl ${passion.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <passion.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">{passion.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{passion.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {passions.map((passion, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200"
+            >
+              <div className={`w-16 h-16 rounded-2xl ${passion.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <passion.icon className="w-8 h-8" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">{passion.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{passion.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

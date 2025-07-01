@@ -52,10 +52,10 @@ export default function BiotechSection() {
   };
 
   return (
-    <section id="biotechnology" className="py-20 bg-white">
+    <section id="biotechnology" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4 border border-green-200">
               <Microscope className="w-8 h-8 text-green-600" />
@@ -71,7 +71,7 @@ export default function BiotechSection() {
         </div>
 
         {/* Completed Courses Carousel */}
-        <div className="mb-20">
+        <div className="mb-16">
           <div className="relative max-w-4xl mx-auto">
             {/* Navigation Buttons */}
             <button
@@ -163,6 +163,25 @@ export default function BiotechSection() {
                 Course {currentCourse + 1} of {completedCourses.length}
               </span>
             </div>
+          </div>
+        </div>
+
+        {/* Future Goals CTA */}
+        <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-green-400">
+          <Microscope className="w-16 h-16 mx-auto mb-6 opacity-80" />
+          <h3 className="text-3xl font-bold mb-4">Science Meets Creativity</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Bridging the gap between scientific innovation and creative communication. 
+            My goal is to make biotechnology accessible and exciting through engaging content.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <Microscope className="w-5 h-5 mr-2" />
+              Collaborate on Science Content
+            </a>
           </div>
         </div>
       </div>

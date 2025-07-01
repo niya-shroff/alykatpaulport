@@ -84,10 +84,10 @@ export default function CrochetSection() {
   };
 
   return (
-    <section id="crocheting" className="py-20 bg-gray-50">
+    <section id="crocheting" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mr-4 border border-rose-200">
               <Heart className="w-8 h-8 text-rose-600" />
@@ -103,7 +103,7 @@ export default function CrochetSection() {
 
         {/* Skills & Techniques */}
         <div className="mb-20">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <div className="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center mr-3 border border-rose-200">
                 <Scissors className="w-4 h-4 text-rose-600" />
@@ -130,8 +130,8 @@ export default function CrochetSection() {
         </div>
 
         {/* Project Gallery */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
+        <div className="mb-20">
+          <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3 border border-pink-200">
                 <Camera className="w-4 h-4 text-pink-600" />
@@ -214,7 +214,7 @@ export default function CrochetSection() {
         </div>
 
         {/* Custom Orders CTA */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 text-center border border-gray-200 shadow-lg">
+        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 text-center border border-gray-200 shadow-lg">
           <ShoppingBag className="w-16 h-16 mx-auto mb-6 text-rose-600" />
           <h3 className="text-3xl font-bold text-gray-800 mb-4">Custom Crochet Orders</h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
