@@ -31,13 +31,6 @@ export default function CrochetSection() {
 
   const crochetProjects = [
     {
-      title: 'Cozy Blankets',
-      description: 'Handmade blankets with intricate stitch patterns',
-      image: 'https://images.pexels.com/photos/6069112/pexels-photo-6069112.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Intermediate',
-      time: '2-3 weeks'
-    },
-    {
       title: 'Fashion Accessories',
       description: 'Stylish bags, hats, and scarves',
       image: 'https://images.pexels.com/photos/6069113/pexels-photo-6069113.jpeg?auto=compress&cs=tinysrgb&w=600',
