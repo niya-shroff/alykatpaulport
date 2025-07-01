@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Heart } from 'lucide-react';
+import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Scissors } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'About', href: '#about', icon: BookOpen },
+    { name: 'Biotech', href: '#biotechnology', icon: Microscope },
     { name: 'Music', href: '#music', icon: Music },
     { name: 'UGC', href: '#ugc', icon: Camera },
     { name: 'Blog', href: '#blog', icon: BookOpen },
-    { name: 'Biotech', href: '#biotechnology', icon: Microscope },
-    { name: 'Crochet', href: '#crocheting', icon: Heart },
+    { name: 'Crochet', href: '#crocheting', icon: Scissors },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 

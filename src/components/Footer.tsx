@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, Heart } from 'lucide-react';
+import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, Scissors } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -40,7 +40,7 @@ export default function Footer() {
                 Blog
               </a>
               <a href="#crocheting" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
-                <Heart className="w-4 h-4 mr-2" />
+                <Scissors className="w-4 h-4 mr-2" />
                 Crochet
               </a>
               <a href="#contact" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
