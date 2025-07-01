@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, Spool } from 'lucide-react';
+import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, School as Spool } from 'lucide-react';
 
 export default function Footer() {
   return (

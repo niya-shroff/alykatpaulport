@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Camera, PenTool, Microscope, Spool } from 'lucide-react';
+import { Music, Camera, PenTool, Microscope, School as Spool } from 'lucide-react';
 
 export default function About() {
   const passions = [
