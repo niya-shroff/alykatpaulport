@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Spool } from 'lucide-react';
+import { Menu, X, Music, Camera, BookOpen, Mail, Microscope } from 'lucide-react';
 import { Spool } from 'lucide-react';
 
 export default function Header() {
