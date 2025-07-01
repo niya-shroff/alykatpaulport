@@ -15,24 +15,6 @@ export default function BiotechSection() {
       color: 'bg-green-100 text-green-600 border-green-200'
     },
     {
-      title: 'Biochemistry & Metabolism',
-      code: 'CHEM 420',
-      description: 'Advanced study of metabolic pathways, enzyme kinetics, and cellular energy systems',
-      semester: 'Spring 2024',
-      credits: 4,
-      highlights: ['Enzyme Kinetics', 'Metabolic Pathways', 'Bioenergetics'],
-      color: 'bg-blue-100 text-blue-600 border-blue-200'
-    },
-    {
-      title: 'Laboratory Techniques in Biotechnology',
-      code: 'BT 350',
-      description: 'Hands-on experience with modern biotechnology laboratory equipment and methodologies',
-      semester: 'Fall 2024',
-      credits: 3,
-      highlights: ['Gel Electrophoresis', 'Cell Culture', 'Spectroscopy'],
-      color: 'bg-purple-100 text-purple-600 border-purple-200'
-    },
-    {
       title: 'Microbiology & Immunology',
       code: 'MIC 310',
       description: 'Study of microorganisms, immune system responses, and pathogen-host interactions',
