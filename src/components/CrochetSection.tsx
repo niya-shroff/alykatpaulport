@@ -124,34 +124,6 @@ export default function CrochetSection() {
           </div>
         </div>
 
-        {/* Therapeutic Benefits */}
-        <div className="bg-gradient-to-br from-rose-500 to-pink-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-rose-400 mb-16">
-          <YarnBallIcon className="w-16 h-16 mx-auto mb-6 opacity-80" />
-          <h3 className="text-3xl font-bold mb-4">The Art of Mindful Making</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Crochet is more than just a hobby—it's a form of meditation that brings peace, 
-            focus, and joy. Each stitch is a moment of mindfulness, creating something 
-            beautiful while finding inner calm.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <YarnBallIcon className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Stress Relief</h4>
-              <p className="text-sm opacity-90">Meditative and calming</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Gift className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Meaningful Gifts</h4>
-              <p className="text-sm opacity-90">Handmade with love</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Palette className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Creative Expression</h4>
-              <p className="text-sm opacity-90">Endless possibilities</p>
-            </div>
-          </div>
-        </div>
-
         {/* Custom Orders CTA */}
         <div className="bg-gray-50 rounded-3xl p-8 md:p-12 text-center border border-gray-200 shadow-lg">
           <ShoppingBag className="w-16 h-16 mx-auto mb-6 text-rose-600" />
