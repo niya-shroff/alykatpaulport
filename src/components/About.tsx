@@ -18,7 +18,7 @@ export default function About() {
     {
       icon: Music,
       title: 'Music',
-      description: 'Creating soulful covers on YouTube and recording original music on SoundCloud, sharing my voice with the world.',
+      description: 'Recording soulful covers and original music on SoundCloud and YouTube, sharing my voice with the world.',
       color: 'bg-purple-100 text-purple-600 border-purple-200'
     },
     {
