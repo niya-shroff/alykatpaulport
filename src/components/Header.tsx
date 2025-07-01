@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Scissors } from 'lucide-react';
+import { Menu, X, Music, Camera, BookOpen, Mail, Microscope } from 'lucide-react';
+import YarnBallIcon from './YarnBallIcon';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function Header() {
     { name: 'Music', href: '#music', icon: Music },
     { name: 'UGC', href: '#ugc', icon: Camera },
     { name: 'Blog', href: '#blog', icon: BookOpen },
-    { name: 'Crochet', href: '#crocheting', icon: Scissors },
+    { name: 'Crochet', href: '#crocheting', icon: YarnBallIcon },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
