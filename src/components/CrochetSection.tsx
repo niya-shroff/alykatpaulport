@@ -92,7 +92,7 @@ export default function CrochetSection() {
             <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mr-4 border border-rose-200">
               <Heart className="w-8 h-8 text-rose-600" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crochet Creations</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crocheting</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Discover the therapeutic art of crochet through my handmade creations. From cozy blankets 
