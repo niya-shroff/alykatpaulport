@@ -63,9 +63,10 @@ export default function BiotechSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Biotechnology Journey</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Pursuing my passion for science and innovation through biotechnology studies in Berlin. 
-            Combining theoretical knowledge with practical laboratory experience to understand 
-            the fascinating world of molecular biology and its applications.
+            Pursuing my passion for science and innovation through biotechnology 
+            studies in Berlin. 
+            Combining theoretical knowledge with practical laboratory experience to 
+            understand the fascinating world of molecular biology and its applications.
           </p>
         </div>
 
