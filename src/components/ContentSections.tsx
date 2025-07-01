@@ -39,7 +39,7 @@ export default function ContentSections() {
       likes: '2',
       url: 'https://soundcloud.com/alykatpaul/its-ok-if-you-forget-me',
       description: 'A deeply personal and emotional original track about letting go and finding peace in forgetting.',
-      gradient: 'from-orange-400 to-orange-600'
+      gradient: 'from-pink-400 to-pink-600'
     },
     {
       title: 'love at first fight',
@@ -47,7 +47,7 @@ export default function ContentSections() {
       likes: '2',
       url: 'https://soundcloud.com/alykatpaul/love-at-first-fight',
       description: 'An original song exploring the complex emotions of relationships and the beauty found in conflict.',
-      gradient: 'from-orange-500 to-orange-700'
+      gradient: 'from-blue-500 to-blue-700'
     },
     {
       title: 'bleeds',
