@@ -96,7 +96,6 @@ export default function BiotechSection() {
               </div>
               <h3 className="text-3xl font-bold text-gray-800">Completed Courses</h3>
             </div>
-            <p className="text-lg text-gray-600">Academic achievements and coursework completed</p>
           </div>
 
           {/* Carousel Container */}
