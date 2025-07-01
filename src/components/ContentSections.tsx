@@ -55,7 +55,7 @@ export default function ContentSections() {
       likes: '5',
       url: 'https://soundcloud.com/alykatpaul/bleeds',
       description: 'A haunting and vulnerable original piece about emotional wounds and the healing process.',
-      gradient: 'from-orange-300 to-orange-400'
+      gradient: 'from-orange-500 to-orange-700'
     }
   ];
 
