@@ -76,7 +76,6 @@ export default function BiotechSection() {
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 border border-green-200">
                 <Award className="w-4 h-4 text-green-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-800">Completed Courses</h3>
             </div>
           </div>
 
