@@ -52,7 +52,7 @@ export default function BiotechSection() {
   };
 
   return (
-    <section id="biotechnology" className="py-24 bg-white">
+    <section id="biotechnology" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Header */}
         <div className="text-center mb-20">
@@ -71,97 +71,95 @@ export default function BiotechSection() {
         </div>
 
         {/* Completed Courses Carousel */}
-        <div className="mb-16">
-          <div className="relative max-w-4xl mx-auto">
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevCourse}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200 group"
+        <div className="relative max-w-4xl mx-auto">
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevCourse}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200 group"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-green-600" />
+          </button>
+          
+          <button
+            onClick={nextCourse}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200 group"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-green-600" />
+          </button>
+
+          {/* Course Card */}
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentCourse * 100}%)` }}
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-green-600" />
-            </button>
-            
-            <button
-              onClick={nextCourse}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200 group"
-            >
-              <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-green-600" />
-            </button>
-
-            {/* Course Card */}
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentCourse * 100}%)` }}
-              >
-                {completedCourses.map((course, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className={`bg-white rounded-2xl p-8 shadow-lg border ${course.color} hover:shadow-2xl transition-all duration-300`}>
-                      <div className="flex items-start justify-between mb-6">
-                        <div className="flex-1">
-                          <div className="flex items-center mb-2">
-                            <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                              {course.code}
-                            </span>
-                          </div>
-                          <h4 className="text-2xl font-bold text-gray-800 mb-2">{course.title}</h4>
-                          <p className="text-gray-600 leading-relaxed mb-4">{course.description}</p>
+              {completedCourses.map((course, index) => (
+                <div key={index} className="w-full flex-shrink-0 px-4">
+                  <div className={`bg-white rounded-2xl p-8 shadow-lg border ${course.color} hover:shadow-2xl transition-all duration-300`}>
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                            {course.code}
+                          </span>
                         </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                          <h5 className="font-semibold text-gray-800 mb-2">Course Details</h5>
-                          <div className="space-y-1 text-sm text-gray-600">
-                            <div className="flex justify-between">
-                              <span>Semester:</span>
-                              <span className="font-medium">{course.semester}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Credits:</span>
-                              <span className="font-medium">{course.credits} ECTS</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div>
-                          <h5 className="font-semibold text-gray-800 mb-2">Key Topics</h5>
-                          <div className="flex flex-wrap gap-2">
-                            {course.highlights.map((highlight, idx) => (
-                              <span
-                                key={idx}
-                                className={`text-xs px-2 py-1 rounded-full ${course.color} font-medium`}
-                              >
-                                {highlight}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Progress Indicator */}
-                      <div className="flex items-center justify-center space-x-2">
-                        {completedCourses.map((_, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => setCurrentCourse(idx)}
-                            className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                              idx === currentCourse ? 'bg-green-500 w-8' : 'bg-gray-300'
-                            }`}
-                          />
-                        ))}
+                        <h4 className="text-2xl font-bold text-gray-800 mb-2">{course.title}</h4>
+                        <p className="text-gray-600 leading-relaxed mb-4">{course.description}</p>
                       </div>
                     </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Course Details</h5>
+                        <div className="space-y-1 text-sm text-gray-600">
+                          <div className="flex justify-between">
+                            <span>Semester:</span>
+                            <span className="font-medium">{course.semester}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Credits:</span>
+                            <span className="font-medium">{course.credits} ECTS</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h5 className="font-semibold text-gray-800 mb-2">Key Topics</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {course.highlights.map((highlight, idx) => (
+                            <span
+                              key={idx}
+                              className={`text-xs px-2 py-1 rounded-full ${course.color} font-medium`}
+                            >
+                              {highlight}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Progress Indicator */}
+                    <div className="flex items-center justify-center space-x-2">
+                      {completedCourses.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentCourse(idx)}
+                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                            idx === currentCourse ? 'bg-green-500 w-8' : 'bg-gray-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            {/* Course Counter */}
-            <div className="text-center mt-6">
-              <span className="text-sm text-gray-500">
-                Course {currentCourse + 1} of {completedCourses.length}
-              </span>
-            </div>
+          </div>
+          {/* Course Counter */}
+          <div className="text-center mt-6">
+            <span className="text-sm text-gray-500">
+              Course {currentCourse + 1} of {completedCourses.length}
+            </span>
           </div>
         </div>
       </div>
