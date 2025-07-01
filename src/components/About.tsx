@@ -48,8 +48,7 @@ export default function About() {
               the Berlin University of Applied Science and Technology in Germany.
               While I'm passionate about STEM, I'm also a creative at heart—I love 
               expressing myself through music, photography, content creation, writing 
-              and crocheting. For me, it's all about telling real stories and connecting 
-              with people in a meaningful way!
+              and crocheting.
             </p>
           </div>
         </div>
