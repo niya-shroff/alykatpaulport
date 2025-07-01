@@ -191,40 +191,6 @@ export default function BiotechSection() {
               </span>
             </div>
           </div>
-
-          {/* Academic Stats */}
-          <div className="mt-12 bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2 border border-green-200">
-                  <BookOpen className="w-6 h-6 text-green-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-800">{completedCourses.length}</div>
-                <div className="text-sm text-gray-600">Courses Completed</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2 border border-blue-200">
-                  <Award className="w-6 h-6 text-blue-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-800">3.7</div>
-                <div className="text-sm text-gray-600">GPA</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-2 border border-purple-200">
-                  <FlaskConical className="w-6 h-6 text-purple-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-800">22</div>
-                <div className="text-sm text-gray-600">ECTS Credits</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-2 border border-teal-200">
-                  <Microscope className="w-6 h-6 text-teal-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-800">15+</div>
-                <div className="text-sm text-gray-600">Lab Hours/Week</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
