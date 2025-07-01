@@ -5,7 +5,6 @@ export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
   const [showCursor, setShowCursor] = useState(true);
 
   const phrases = [
@@ -23,9 +22,9 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const currentPhrase = phrases[currentPhraseIndex];
-    let currentIndex = 0;
     let timeoutId: NodeJS.Timeout;
+    let currentIndex = 0;
+    const currentPhrase = phrases[currentPhraseIndex];
 
     const typeText = () => {
       if (currentIndex <= currentPhrase.length) {
@@ -49,14 +48,13 @@ export default function Hero() {
       }
     };
 
-    if (isTyping) {
-      typeText();
-    }
+    // Start typing
+    typeText();
 
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [currentPhraseIndex, phrases]);
+  }, [currentPhraseIndex]);
 
   // Cursor blinking effect
   useEffect(() => {
