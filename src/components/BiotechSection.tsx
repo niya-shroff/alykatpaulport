@@ -243,6 +243,7 @@ export default function BiotechSection() {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 }
