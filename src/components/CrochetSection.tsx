@@ -101,34 +101,6 @@ export default function CrochetSection() {
           </p>
         </div>
 
-        {/* Skills & Techniques */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center mr-3 border border-rose-200">
-                <Scissors className="w-4 h-4 text-rose-600" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-800">Skills & Techniques</h3>
-            </div>
-            <p className="text-lg text-gray-600">Mastering various crochet techniques and styles</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {crochetSkills.map((skill, index) => (
-              <div
-                key={index}
-                className={`group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border ${skill.color}`}
-              >
-                <div className={`w-12 h-12 rounded-xl ${skill.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <skill.icon className="w-6 h-6" />
-                </div>
-                <h4 className="text-lg font-bold text-gray-800 mb-3">{skill.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{skill.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Project Gallery */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -182,34 +154,6 @@ export default function CrochetSection() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Therapeutic Benefits */}
-        <div className="bg-gradient-to-br from-rose-500 to-pink-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-rose-400 mb-16">
-          <Heart className="w-16 h-16 mx-auto mb-6 opacity-80" />
-          <h3 className="text-3xl font-bold mb-4">The Art of Mindful Making</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Crochet is more than just a hobby—it's a form of meditation that brings peace, 
-            focus, and joy. Each stitch is a moment of mindfulness, creating something 
-            beautiful while finding inner calm.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Heart className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Stress Relief</h4>
-              <p className="text-sm opacity-90">Meditative and calming</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Gift className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Meaningful Gifts</h4>
-              <p className="text-sm opacity-90">Handmade with love</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <Palette className="w-8 h-8 mx-auto mb-2 opacity-80" />
-              <h4 className="font-semibold mb-1">Creative Expression</h4>
-              <p className="text-sm opacity-90">Endless possibilities</p>
-            </div>
           </div>
         </div>
 
