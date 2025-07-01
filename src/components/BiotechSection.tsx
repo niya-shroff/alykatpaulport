@@ -174,15 +174,6 @@ export default function BiotechSection() {
             Bridging the gap between scientific innovation and creative communication. 
             My goal is to make biotechnology accessible and exciting through engaging content.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <Microscope className="w-5 h-5 mr-2" />
-              Collaborate on Science Content
-            </a>
-          </div>
         </div>
       </div>
     </section>
