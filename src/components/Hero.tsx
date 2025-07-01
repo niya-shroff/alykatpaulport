@@ -25,44 +25,38 @@ export default function Hero() {
   useEffect(() => {
     const currentPhrase = phrases[currentPhraseIndex];
     let currentIndex = 0;
-    let typingInterval: NodeJS.Timeout;
-    let pauseTimeout: NodeJS.Timeout;
+    let timeoutId: NodeJS.Timeout;
 
     const typeText = () => {
       if (currentIndex <= currentPhrase.length) {
         setTypewriterText(currentPhrase.slice(0, currentIndex));
         currentIndex++;
+        timeoutId = setTimeout(typeText, 100);
       } else {
-        clearInterval(typingInterval);
-        setIsTyping(false);
-        
         // Pause before starting to delete
-        pauseTimeout = setTimeout(() => {
-          deleteText();
-        }, 2000);
+        timeoutId = setTimeout(deleteText, 2000);
       }
     };
 
     const deleteText = () => {
       if (currentIndex > 0) {
-        setTypewriterText(currentPhrase.slice(0, currentIndex - 1));
         currentIndex--;
-        setTimeout(deleteText, 50);
+        setTypewriterText(currentPhrase.slice(0, currentIndex));
+        timeoutId = setTimeout(deleteText, 50);
       } else {
-        setIsTyping(true);
+        // Move to next phrase
         setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
       }
     };
 
     if (isTyping) {
-      typingInterval = setInterval(typeText, 100);
+      typeText();
     }
 
     return () => {
-      clearInterval(typingInterval);
-      clearTimeout(pauseTimeout);
+      clearTimeout(timeoutId);
     };
-  }, [currentPhraseIndex, isTyping]);
+  }, [currentPhraseIndex, phrases]);
 
   // Cursor blinking effect
   useEffect(() => {
