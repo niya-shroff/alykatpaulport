@@ -71,12 +71,6 @@ export default function BiotechSection() {
 
         {/* Completed Courses Carousel */}
         <div className="mb-20">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-            </div>
-          </div>
-
-          {/* Carousel Container */}
           <div className="relative max-w-4xl mx-auto">
             {/* Navigation Buttons */}
             <button
