@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Camera, PenTool, Heart, Users, Video } from 'lucide-react';
+import { Music, Camera, PenTool, Heart, Users, Video, Microscope } from 'lucide-react';
 
 export default function About() {
   const passions = [
@@ -20,6 +20,18 @@ export default function About() {
       title: 'Travel Blogging',
       description: 'Documenting adventures and sharing travel insights through captivating stories and photography.',
       color: 'bg-blue-100 text-blue-600 border-blue-200'
+    },
+    {
+      icon: Microscope,
+      title: 'Biotechnology',
+      description: 'Studying the fascinating world of biotechnology and its applications in modern science.',
+      color: 'bg-green-100 text-green-600 border-green-200'
+    },
+    {
+      icon: Heart,
+      title: 'Crocheting',
+      description: 'Creating beautiful handmade pieces and sharing the therapeutic art of crochet.',
+      color: 'bg-rose-100 text-rose-600 border-rose-200'
     }
   ];
 
@@ -36,14 +48,15 @@ export default function About() {
               the Berlin University of Applied Science and Technology in Germany.
               While I'm passionate about STEM, I'm also a creative at heart—I love 
               expressing myself through music, photography, content creation, writing 
-              and crocheting.
+              and crocheting. For me, it's all about telling real stories and connecting 
+              with people in a meaningful way!
             </p>
           </div>
         </div>
 
         {/* Creative Passions */}
         <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {passions.map((passion, index) => (
               <div
                 key={index}

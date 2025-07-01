@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Music, Camera, BookOpen, Mail } from 'lucide-react';
+import { Menu, X, Music, Camera, BookOpen, Mail, Microscope, Heart } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +9,8 @@ export default function Header() {
     { name: 'Music', href: '#music', icon: Music },
     { name: 'UGC', href: '#ugc', icon: Camera },
     { name: 'Blog', href: '#blog', icon: BookOpen },
+    { name: 'Biotech', href: '#biotechnology', icon: Microscope },
+    { name: 'Crochet', href: '#crocheting', icon: Heart },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
@@ -23,12 +25,12 @@ export default function Header() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                className="text-gray-600 hover:text-red-600 px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
               >
                 <item.icon className="w-4 h-4" />
                 {item.name}

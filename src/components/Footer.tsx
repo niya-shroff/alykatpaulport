@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen } from 'lucide-react';
+import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
             </h3>
             <p className="text-gray-600 leading-relaxed">
               Multi-passionate creative bringing authentic stories to life through music, 
-              video, and written word. Let's create something amazing together.
+              video, written word, science, and handmade crafts. Let's create something amazing together.
             </p>
           </div>
           
@@ -34,6 +34,14 @@ export default function Footer() {
               <a href="#blog" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Blog
+              </a>
+              <a href="#biotechnology" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Microscope className="w-4 h-4 mr-2" />
+                Biotech
+              </a>
+              <a href="#crocheting" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Heart className="w-4 h-4 mr-2" />
+                Crochet
               </a>
               <a href="#contact" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Mail className="w-4 h-4 mr-2" />
