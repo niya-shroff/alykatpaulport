@@ -689,30 +689,6 @@ export default function ContentSections() {
                 </div>
               ))}
             </div>
-          {/* Platform Links */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-            <a
-              href="https://travelcamera.photo.blog/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Read My Blog
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-            <a
-              href="https://www.instagram.com/_travelcamera/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <Instagram className="w-5 h-5 mr-2" />
-              Photography Instagram
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
-            
           </div>
         </div>
       </section>
