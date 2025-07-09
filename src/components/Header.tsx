@@ -8,8 +8,8 @@ export default function Header() {
   const navItems = [
     { name: 'About', href: '#about', icon: BookOpen },
     { name: 'Biotech', href: '#biotechnology', icon: Microscope },
-    { name: 'Music', href: '#music', icon: Music },
     { name: 'UGC', href: '#ugc', icon: Camera },
+    { name: 'Music', href: '#music', icon: Music },
     { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'Crochet', href: '#crocheting', icon: YarnBallIcon },
     { name: 'Contact', href: '#contact', icon: Mail },
