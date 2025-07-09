@@ -468,8 +468,7 @@ export default function ContentSections() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Music</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Discover my musical journey through original songs on SoundCloud and heartfelt covers on YouTube. 
-              From emotional originals to acoustic renditions of your favorite tracks, I share my passion for music across platforms.
+              Discover my musical journey through original songs on SoundCloud and heartfelt covers on YouTube. From emotional originals to acoustic renditions of your favorite tracks, I share my passion for music across platforms.
             </p>
           </div>
 
