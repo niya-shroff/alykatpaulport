@@ -18,6 +18,25 @@ function RecentBlogPosts() {
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
 
+  // Function to extract first image from post content
+  const extractFirstImage = (content: string): string | null => {
+    // Look for img tags in the content
+    const imgRegex = /<img[^>]+src="([^">]+)"/i;
+    const match = content.match(imgRegex);
+    
+    if (match && match[1]) {
+      // If it's a WordPress.com hosted image, ensure we get a reasonable size
+      let imageUrl = match[1];
+      if (imageUrl.includes('travelcameraphoto.wordpress.com')) {
+        // Remove any existing size parameters and add our own
+        imageUrl = imageUrl.split('?')[0] + '?w=600';
+      }
+      return imageUrl;
+    }
+    
+    return null;
+  };
+
   React.useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
@@ -131,15 +150,32 @@ function RecentBlogPosts() {
             className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
           >
             <div className="relative h-48 overflow-hidden">
-              {post.featured_image ? (
+              {post.featured_image || extractFirstImage(post.content) ? (
                 <img
-                  src={post.featured_image}
+                  src={post.featured_image || extractFirstImage(post.content) || ''}
                   alt={stripHtml(post.title)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    // Fallback to gradient if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center">
+                          <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                          </svg>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-white opacity-60" />
+                  <svg className="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
