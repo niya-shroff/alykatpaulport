@@ -24,30 +24,6 @@ export default function CrochetSection() {
     }
   ];
 
-  const crochetProjects = [
-    {
-      title: 'Fashion Accessories',
-      description: 'Stylish bags, hats, and scarves',
-      image: 'https://images.pexels.com/photos/6069113/pexels-photo-6069113.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Beginner',
-      time: '3-5 days'
-    },
-    {
-      title: 'Home Decor',
-      description: 'Beautiful decorative pieces for the home',
-      image: 'https://images.pexels.com/photos/6069111/pexels-photo-6069111.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Intermediate',
-      time: '1-2 weeks'
-    },
-    {
-      title: 'Seasonal Decorations',
-      description: 'Holiday and seasonal themed pieces',
-      image: 'https://images.pexels.com/photos/6069110/pexels-photo-6069110.jpeg?auto=compress&cs=tinysrgb&w=600',
-      difficulty: 'Intermediate',
-      time: '2-4 days'
-    }
-  ];
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'bg-green-500';
@@ -73,55 +49,6 @@ export default function CrochetSection() {
             to adorable amigurumi, I find joy in creating beautiful, functional pieces that bring 
             warmth and happiness to everyday life.
           </p>
-        </div>
-        {/* Project Gallery */}
-        <div className="mb-20">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-4">
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {crochetProjects.map((project, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rose-600/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className={`text-white text-xs px-3 py-1 rounded-full font-medium ${getDifficultyColor(project.difficulty)}`}>
-                      {project.difficulty}
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <YarnBallIcon className="w-5 h-5 text-white opacity-80" />
-                  </div>
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="flex items-center text-sm">
-                      <Star className="w-4 h-4 mr-1" />
-                      {project.time}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-gray-800 mb-2">{project.title}</h4>
-                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>Time: {project.time}</span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(project.difficulty)} text-white`}>
-                      {project.difficulty}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Custom Orders CTA */}
