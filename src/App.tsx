@@ -15,8 +15,8 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <ContentSections />
       <BiotechSection />
+      <ContentSections />
       <CrochetSection />
       <SocialLinks />
       <Contact />
