@@ -222,12 +222,12 @@ export default function ContentSections() {
     },
     {
       id: 'hjIEqtkZbck',
-      title: 'backyard boy - claire rosinkranz (cover)',
-      thumbnail: 'https://img.youtube.com/vi/hjIEqtkZbck/maxresdefault.jpg',
-      duration: '8:32',
-      views: '3K',
-      description: 'A fun and vibrant cover of Claire Rosinkranz\'s catchy "backyard boy" with my own musical interpretation.',
-      url: 'https://www.youtube.com/watch?v=hjIEqtkZbck'
+      title: 'girl crush',
+      thumbnail: 'https://img.youtube.com/vi/Fi_47gWD1sw/maxresdefault.jpg',
+      duration: '3:56',
+      views: '324',
+      description: 'A fun and vibrant cover of Little Big Town\'s catchy "girl crush" with my new guitar.',
+      url: 'https://www.youtube.com/watch?v=Fi_47gWD1sw'
     },
     {
       id: 'PJpmB8QNn2Y',
