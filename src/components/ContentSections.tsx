@@ -640,11 +640,11 @@ export default function ContentSections() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4 border border-blue-200">
                 <BookOpen className="w-8 h-8 text-blue-600" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Travel & Photography</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Travel Blog</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Follow my travel adventures through both written stories and stunning photography. 
-              From hidden gems to popular destinations, I capture the world through words and lens.
+              From hidden gems to popular destinations, I capture the world through words and my lens.
             </p>
           </div>
 
