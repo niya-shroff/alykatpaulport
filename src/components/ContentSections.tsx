@@ -213,7 +213,7 @@ export default function ContentSections() {
   const recentVideos = [
     {
       id: 'hjIEqtkZbck',
-      title: 'girl crush',
+      title: 'girl crush - little big town',
       thumbnail: 'https://img.youtube.com/vi/Fi_47gWD1sw/maxresdefault.jpg',
       duration: '3:56',
       views: '324',
@@ -222,7 +222,7 @@ export default function ContentSections() {
     },
     {
       id: 'SGZHFZKmsFI',
-      title: 'mess it up - gracie abrams (cover)',
+      title: 'mess it up - gracie abrams',
       thumbnail: 'https://img.youtube.com/vi/SGZHFZKmsFI/maxresdefault.jpg',
       duration: '10:45',
       views: '3.1K',
