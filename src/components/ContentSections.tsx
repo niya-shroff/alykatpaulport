@@ -135,10 +135,10 @@ function RecentBlogPosts() {
                 <img
                   src={post.featured_image}
                   alt={stripHtml(post.title)}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-white opacity-60" />
                 </div>
               )}
@@ -162,8 +162,7 @@ function RecentBlogPosts() {
                 {stripHtml(post.excerpt)}
               </p>
               
-              <div className="flex items-center justify-between text-sm text-gray-500">
-                <span>By {post.author.name}</span>
+              <div className="flex items-center justify-end text-sm text-gray-500">
                 <span>{formatDate(post.date)}</span>
               </div>
             </div>
