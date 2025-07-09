@@ -221,6 +221,15 @@ export default function ContentSections() {
       url: 'https://www.youtube.com/watch?v=Fi_47gWD1sw'
     },
     {
+      id: 'PJpmB8QNn2Y',
+      title: 'found a love - 7 hills worship',
+      thumbnail: 'https://img.youtube.com/vi/PJpmB8QNn2Y/maxresdefault.jpg',
+      duration: '12:18',
+      views: '1.6K',
+      description: 'A heartfelt worship cover of "found a love" by 7 Hills Worship, sharing the message of faith and love.',
+      url: 'https://www.youtube.com/watch?v=PJpmB8QNn2Y'
+    },
+    {
       id: 'SGZHFZKmsFI',
       title: 'mess it up - gracie abrams',
       thumbnail: 'https://img.youtube.com/vi/SGZHFZKmsFI/maxresdefault.jpg',
@@ -229,15 +238,6 @@ export default function ContentSections() {
       description: 'My acoustic cover of Gracie Abrams\' emotional hit "mess it up" - bringing my own style to this beautiful song.',
       url: 'https://www.youtube.com/watch?v=SGZHFZKmsFI'
     },
-    {
-      id: 'PJpmB8QNn2Y',
-      title: 'found a love - 7 hills worship',
-      thumbnail: 'https://img.youtube.com/vi/PJpmB8QNn2Y/maxresdefault.jpg',
-      duration: '12:18',
-      views: '1.6K',
-      description: 'A heartfelt worship cover of "found a love" by 7 Hills Worship, sharing the message of faith and love.',
-      url: 'https://www.youtube.com/watch?v=PJpmB8QNn2Y'
-    }
   ];
 
   const soundCloudTracks = [
