@@ -212,15 +212,6 @@ function RecentBlogPosts() {
 export default function ContentSections() {
   const recentVideos = [
     {
-      id: 'SGZHFZKmsFI',
-      title: 'mess it up - gracie abrams (cover)',
-      thumbnail: 'https://img.youtube.com/vi/SGZHFZKmsFI/maxresdefault.jpg',
-      duration: '10:45',
-      views: '3.1K',
-      description: 'My acoustic cover of Gracie Abrams\' emotional hit "mess it up" - bringing my own style to this beautiful song.',
-      url: 'https://www.youtube.com/watch?v=SGZHFZKmsFI'
-    },
-    {
       id: 'hjIEqtkZbck',
       title: 'girl crush',
       thumbnail: 'https://img.youtube.com/vi/Fi_47gWD1sw/maxresdefault.jpg',
@@ -228,6 +219,15 @@ export default function ContentSections() {
       views: '324',
       description: 'A fun and vibrant cover of Little Big Town\'s catchy "girl crush" with my new guitar.',
       url: 'https://www.youtube.com/watch?v=Fi_47gWD1sw'
+    },
+    {
+      id: 'SGZHFZKmsFI',
+      title: 'mess it up - gracie abrams (cover)',
+      thumbnail: 'https://img.youtube.com/vi/SGZHFZKmsFI/maxresdefault.jpg',
+      duration: '10:45',
+      views: '3.1K',
+      description: 'My acoustic cover of Gracie Abrams\' emotional hit "mess it up" - bringing my own style to this beautiful song.',
+      url: 'https://www.youtube.com/watch?v=SGZHFZKmsFI'
     },
     {
       id: 'PJpmB8QNn2Y',
