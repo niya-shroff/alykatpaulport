@@ -312,6 +312,29 @@ export default function ContentSections() {
     }
   ];
 
+  const photographyHighlights = [
+    {
+      location: 'Berlin, Germany',
+      image: 'https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Urban architecture and city life'
+    },
+    {
+      location: 'Malaysian Landscapes',
+      image: 'https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Natural beauty and tropical scenes'
+    },
+    {
+      location: 'European Adventures',
+      image: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Historic cities and cultural moments'
+    },
+    {
+      location: 'Street Photography',
+      image: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600',
+      description: 'Candid moments and urban stories'
+    }
+  ];
+
   return (
     <>
       {/* UGC Section */}
@@ -652,148 +675,47 @@ export default function ContentSections() {
 
           {/* Photography Gallery */}
           <RecentBlogPosts />
-          {/* Photography Highlights - Instagram Posts */}
-          <div className="mb-20">
+
+          <div className="mb-16">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3 border border-pink-200">
-                  <Instagram className="w-4 h-4 text-pink-600" />
+                  <Camera className="w-4 h-4 text-pink-600" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-800">Photography Highlights</h3>
               </div>
-              <p className="text-lg text-gray-600">Latest captures from my travel photography adventures</p>
+              <p className="text-lg text-gray-600">Capturing moments and memories from around the world</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Instagram Post 1 */}
-              <a
-                href="https://www.instagram.com/p/DJ9-X9BIEER/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <iframe
-                    src="https://www.instagram.com/p/DJ9-X9BIEER/embed"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                    className="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Instagram className="w-5 h-5 text-white drop-shadow-lg" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {photographyHighlights.map((photo, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={photo.image}
+                      alt={photo.location}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex items-center mb-1">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        <span className="text-sm font-medium">{photo.location}</span>
+                      </div>
+                      <p className="text-xs opacity-90">{photo.description}</p>
+                    </div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Camera className="w-5 h-5 text-white" />
+                    </div>
                   </div>
                 </div>
-              </a>
-
-              {/* Instagram Post 2 */}
-              <a
-                href="https://www.instagram.com/p/DJ9-RJvo5zI/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <iframe
-                    src="https://www.instagram.com/p/DJ9-RJvo5zI/embed"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                    className="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Instagram className="w-5 h-5 text-white drop-shadow-lg" />
-                  </div>
-                </div>
-              {/* Instagram Post 3 */}
-              <a
-                href="https://www.instagram.com/p/DJ9-PaoI75v/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <iframe
-                    src="https://www.instagram.com/p/DJ9-PaoI75v/embed"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                    className="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Instagram className="w-5 h-5 text-white drop-shadow-lg" />
-                  </div>
-                </div>
-              </a>
-              </a>
-              {/* Instagram Post 4 */}
-              <a
-                href="https://www.instagram.com/p/DJ9-EEQokm7/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <iframe
-                    src="https://www.instagram.com/p/DJ9-EEQokm7/embed"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                    className="w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Instagram className="w-5 h-5 text-white drop-shadow-lg" />
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* Instagram CTA */}
-            <div className="text-center mt-12">
-              <a
-                href="https://www.instagram.com/_travelcamera/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                <Instagram className="w-5 h-5 mr-2" />
-                Follow @_travelcamera
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+              ))}
             </div>
           </div>
         </div>
-          {/* Travel Blog CTA */}
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-blue-400">
-            <BookOpen className="w-16 h-16 mx-auto mb-6 opacity-80" />
-            <h3 className="text-3xl font-bold mb-4">Travel Stories & Insights</h3>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Dive deeper into my travel experiences with detailed stories, practical tips, 
-              and honest insights from destinations around the world.
-            </p>
-            <a
-              href="https://travelcamera.photo.blog/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Explore My Blog
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
       </section>
     </>
   );
