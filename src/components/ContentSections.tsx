@@ -465,7 +465,7 @@ export default function ContentSections() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4 border border-purple-200">
                 <Music className="w-8 h-8 text-purple-600" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Music & Content</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Music</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Discover my musical journey through original songs on SoundCloud and heartfelt covers on YouTube. 
