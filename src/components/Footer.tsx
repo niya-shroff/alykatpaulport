@@ -28,13 +28,13 @@ export default function Footer() {
                 <Microscope className="w-4 h-4 mr-2" />
                 Biotech
               </a>
-              <a href="#music" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
-                <Music className="w-4 h-4 mr-2" />
-                Music
-              </a>
               <a href="#ugc" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Camera className="w-4 h-4 mr-2" />
                 UGC
+              </a>
+              <a href="#music" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Music className="w-4 h-4 mr-2" />
+                Music
               </a>
               <a href="#blog" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <BookOpen className="w-4 h-4 mr-2" />
