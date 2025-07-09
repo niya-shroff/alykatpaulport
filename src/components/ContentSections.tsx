@@ -644,7 +644,7 @@ export default function ContentSections() {
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Follow my travel adventures through both written stories and stunning photography. 
-              From hidden gems to popular destinations, I capture the world through words and my Nikon D500 lens.
+              From hidden gems to popular destinations, I capture the world through words and my Nikon D500.
             </p>
           </div>
 
