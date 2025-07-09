@@ -679,26 +679,6 @@ export default function ContentSections() {
               ))}
             </div>
           </div>
-
-          {/* Travel Blog CTA */}
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl border border-blue-400">
-            <BookOpen className="w-16 h-16 mx-auto mb-6 opacity-80" />
-            <h3 className="text-3xl font-bold mb-4">Travel Stories & Insights</h3>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Dive deeper into my travel experiences with detailed stories, practical tips, 
-              and honest insights from destinations around the world.
-            </p>
-            <a
-              href="https://travelcamera.photo.blog/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Explore My Blog
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
         </div>
       </section>
     </>
