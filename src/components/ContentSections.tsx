@@ -1,6 +1,179 @@
 import React from 'react';
 import { Music, Youtube, Camera, BookOpen, ExternalLink, Play, Eye, Heart, Clock, Radio, Instagram, MapPin, Star, Users } from 'lucide-react';
 
+interface BlogPost {
+  ID: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  URL: string;
+  featured_image?: string;
+  author: {
+    name: string;
+  };
+}
+
+function RecentBlogPosts() {
+  const [blogPosts, setBlogPosts] = React.useState<BlogPost[]>([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch('https://public-api.wordpress.com/rest/v1.1/sites/travelcamera.photo.blog/posts/?number=3');
+        if (!response.ok) {
+          throw new Error('Failed to fetch blog posts');
+        }
+        const data = await response.json();
+        setBlogPosts(data.posts || []);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load blog posts');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const stripHtml = (html: string) => {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  };
+
+  if (loading) {
+    return (
+      <div className="mb-20">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 border border-blue-200">
+              <BookOpen className="w-4 h-4 text-blue-600" />
+            </div>
+            <h3 className="text-3xl font-bold text-gray-800">Latest Travel Stories</h3>
+          </div>
+          <p className="text-lg text-gray-600">Recent adventures and insights from the road</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[...Array(3)].map((_, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 animate-pulse">
+              <div className="h-48 bg-gray-300"></div>
+              <div className="p-6">
+                <div className="h-4 bg-gray-300 rounded mb-2"></div>
+                <div className="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
+                <div className="h-3 bg-gray-300 rounded mb-2"></div>
+                <div className="h-3 bg-gray-300 rounded w-2/3"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="mb-20">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 border border-blue-200">
+              <BookOpen className="w-4 h-4 text-blue-600" />
+            </div>
+            <h3 className="text-3xl font-bold text-gray-800">Latest Travel Stories</h3>
+          </div>
+          <p className="text-lg text-gray-600">Recent adventures and insights from the road</p>
+        </div>
+        <div className="text-center py-12">
+          <p className="text-gray-500 mb-4">Unable to load recent blog posts</p>
+          <a
+            href="https://travelcamera.photo.blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-300"
+          >
+            <BookOpen className="w-4 h-4 mr-2" />
+            Visit Blog
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mb-20">
+      <div className="text-center mb-16">
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 border border-blue-200">
+            <BookOpen className="w-4 h-4 text-blue-600" />
+          </div>
+          <h3 className="text-3xl font-bold text-gray-800">Latest Travel Stories</h3>
+        </div>
+        <p className="text-lg text-gray-600">Recent adventures and insights from the road</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogPosts.map((post) => (
+          <a
+            key={post.ID}
+            href={post.URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
+          >
+            <div className="relative h-48 overflow-hidden">
+              {post.featured_image ? (
+                <img
+                  src={post.featured_image}
+                  alt={stripHtml(post.title)}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-white opacity-60" />
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <ExternalLink className="w-5 h-5 text-white" />
+              </div>
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center text-sm">
+                  <Clock className="w-4 h-4 mr-1" />
+                  {formatDate(post.date)}
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-6">
+              <h4 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+                {stripHtml(post.title)}
+              </h4>
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                {stripHtml(post.excerpt)}
+              </p>
+              
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>By {post.author.name}</span>
+                <span>{formatDate(post.date)}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ContentSections() {
   const recentVideos = [
     {
@@ -466,6 +639,8 @@ export default function ContentSections() {
           </div>
 
           {/* Photography Gallery */}
+          <RecentBlogPosts />
+
           <div className="mb-16">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
