@@ -497,68 +497,7 @@ export default function ContentSections() {
             </a>
           </div>
 
-          {/* YouTube Videos Section */}
-          <div>
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3 border border-red-200">
-                  <Youtube className="w-4 h-4 text-red-600" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-800">Song Covers</h3>
-              </div>
-              <p className="text-lg text-gray-600">Watch my acoustic covers and musical performances</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {recentVideos.map((video, index) => (
-                <a
-                  key={index}
-                  href={video.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
-                >
-                  <div className="relative">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">
-                        <Play className="w-8 h-8 text-white ml-1" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
-                      {video.duration}
-                    </div>
-                    <div className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full font-medium">
-                      YouTube
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <h4 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors duration-200">
-                      {video.title}
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                      {video.description}
-                    </p>
-                    
-                    <div className="flex items-center text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Eye className="w-4 h-4 mr-1" />
-                        {video.views} views
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-                  {/* SoundCloud Tracks Section */}
+          {/* SoundCloud Tracks Section */}
           <div className="mb-20">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-4">
@@ -629,9 +568,68 @@ export default function ContentSections() {
                 </a>
               ))}
             </div>
-            
           </div>
-        
+
+          {/* YouTube Videos Section */}
+          <div>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3 border border-red-200">
+                  <Youtube className="w-4 h-4 text-red-600" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-800">Song Covers</h3>
+              </div>
+              <p className="text-lg text-gray-600">Watch my acoustic covers and musical performances</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {recentVideos.map((video, index) => (
+                <a
+                  key={index}
+                  href={video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200"
+                >
+                  <div className="relative">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
+                      {video.duration}
+                    </div>
+                    <div className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                      YouTube
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h4 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors duration-200">
+                      {video.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {video.description}
+                    </p>
+                    
+                    <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Eye className="w-4 h-4 mr-1" />
+                        {video.views} views
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Enhanced Blog & Photography Section */}
