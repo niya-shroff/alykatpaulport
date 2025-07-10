@@ -1,10 +1,11 @@
 import React from 'react';
-import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen } from 'lucide-react';
+import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope } from 'lucide-react';
+import YarnBallIcon from './YarnBallIcon';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 text-gray-800 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-white text-gray-800 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent mb-4">
@@ -12,7 +13,7 @@ export default function Footer() {
             </h3>
             <p className="text-gray-600 leading-relaxed">
               Multi-passionate creative bringing authentic stories to life through music, 
-              video, and written word. Let's create something amazing together.
+              video, written word, science, and handmade crafts. Let's create something amazing together.
             </p>
           </div>
           
@@ -23,17 +24,25 @@ export default function Footer() {
                 <User className="w-4 h-4 mr-2" />
                 About
               </a>
-              <a href="#music" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
-                <Music className="w-4 h-4 mr-2" />
-                Music
+              <a href="#biotechnology" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Microscope className="w-4 h-4 mr-2" />
+                Biotech
               </a>
               <a href="#ugc" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Camera className="w-4 h-4 mr-2" />
                 UGC
               </a>
+              <a href="#music" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <Music className="w-4 h-4 mr-2" />
+                Music
+              </a>
               <a href="#blog" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Blog
+              </a>
+              <a href="#crocheting" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
+                <YarnBallIcon className="w-4 h-4 mr-2" />
+                Crochet
               </a>
               <a href="#contact" className="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-200">
                 <Mail className="w-4 h-4 mr-2" />
@@ -74,7 +83,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:contact@alykatpaul.me"
-                className="flex items-center justify-center w-full h-12 bg-red-600 hover:bg-red-700 text-white rounded-lg hover:scale-105 transition-all duration-200"
+                className="flex items-center justify-center w-full h-12 bg-sky-400 hover:bg-sky-400 text-white rounded-lg hover:scale-105 transition-all duration-200"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 <span className="text-sm font-medium">Email</span>
@@ -83,9 +92,9 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-300 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-300 text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 Aly Paul. All rights reserved.
+            © 2025 SmileWithMe Productions. All rights reserved.
           </p>
         </div>
       </div>

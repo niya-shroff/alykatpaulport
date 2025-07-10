@@ -4,8 +4,16 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
-  const fullText = 'Creative Content Creator';
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  const phrases = [
+    'Content Creator',
+    'Studying Biotech',
+    'Songwriting',
+    'Blogging',
+    'Crocheting'
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -14,18 +22,47 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
     let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypewriterText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        setIsTypingComplete(true);
-        clearInterval(typingInterval);
-      }
-    }, 100);
+    const currentPhrase = phrases[currentPhraseIndex];
 
-    return () => clearInterval(typingInterval);
+    const typeText = () => {
+      if (currentIndex <= currentPhrase.length) {
+        setTypewriterText(currentPhrase.slice(0, currentIndex));
+        currentIndex++;
+        timeoutId = setTimeout(typeText, 100);
+      } else {
+        // Pause before starting to delete
+        timeoutId = setTimeout(deleteText, 2000);
+      }
+    };
+
+    const deleteText = () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        setTypewriterText(currentPhrase.slice(0, currentIndex));
+        timeoutId = setTimeout(deleteText, 50);
+      } else {
+        // Move to next phrase
+        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+      }
+    };
+
+    // Start typing
+    typeText();
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [currentPhraseIndex]);
+
+  // Cursor blinking effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
   }, []);
 
   const scrollToAbout = () => {
@@ -70,11 +107,15 @@ export default function Hero() {
               <Sparkles className="w-8 h-8 text-red-500 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
             </div>
-            <span className="text-red-600 font-medium">
+            <span className="text-red-600 font-medium min-h-[24px] flex items-center">
               {typewriterText}
-              {!isTypingComplete && (
-                <span className="animate-pulse text-red-600 ml-1">|</span>
-              )}
+              <span 
+                className={`ml-1 text-red-600 transition-opacity duration-100 ${
+                  showCursor ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                |
+              </span>
             </span>
           </div>
           
@@ -102,7 +143,8 @@ export default function Hero() {
               transform: `translateY(${scrollY * -0.08}px)`
             }}
           >
-            Singer, YouTuber, UGC Creator & Travel Blogger bringing authentic stories to life through music, video, and written word.
+            Berlin based Biotechnology student, Singer, YouTuber, UGC Creator, and Travel Blogger 
+            bringing authentic stories to life through music, video, and written word.
           </p>
           
           <div 
