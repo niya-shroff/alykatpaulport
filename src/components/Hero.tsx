@@ -8,8 +8,8 @@ export default function Hero() {
   const [showCursor, setShowCursor] = useState(true);
 
   const phrases = [
-    'Content Creator',
     'Studying Biotech',
+    'Creating Content',
     'Songwriting',
     'Blogging',
     'Crocheting'
@@ -143,8 +143,9 @@ export default function Hero() {
               transform: `translateY(${scrollY * -0.08}px)`
             }}
           >
-            Berlin based Biotechnology student, Singer, YouTuber, UGC Creator, and Travel Blogger 
-            bringing authentic stories to life through music, video, and written word.
+            Originally from Malaysia, I am currently studying Biotechnology at the Berlin University of Applied Science 
+            and Technology in Germany. While I'm passionate about STEM, I'm also a creative at heart — I love expressing
+            myself through content creation, music, blogging, and crocheting Learn more about my passions below!
           </p>
           
           <div 
@@ -167,7 +168,6 @@ export default function Hero() {
               Get In Touch
             </a>
           </div>
-          
           <button
             onClick={scrollToAbout}
             className="animate-bounce transform transition-transform duration-300 cursor-pointer hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-full p-2"
@@ -181,11 +181,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-red-200/40 to-red-300/40 rounded-full blur-3xl animate-pulse" 
-           style={{ transform: `translate(${scrollY * 0.05}px, ${scrollY * 0.08}px)` }}></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-red-300/40 to-red-200/40 rounded-full blur-3xl animate-pulse" 
-           style={{ transform: `translate(${scrollY * -0.03}px, ${scrollY * 0.06}px)`, animationDelay: '1s' }}></div>
     </section>
   );
 }

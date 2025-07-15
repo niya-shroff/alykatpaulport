@@ -6,40 +6,67 @@ export default function BiotechSection() {
 
   const completedCourses = [
     {
-      title: 'Molecular Biology Fundamentals',
-      code: 'BIO 301',
-      description: 'Comprehensive study of DNA, RNA, and protein synthesis mechanisms at the cellular level',
-      semester: 'Fall 2023',
+      title: 'Cell and Molecular Biology 1',
+      germanTitle: 'Zell und Molekülare Biologie 1',
+      description: 'Foundational study of cellular structures, organelles, and molecular processes that govern life at the cellular level',
+      semester: 'Spring 2024',
       credits: 4,
-      highlights: ['PCR Techniques', 'Gene Expression', 'Protein Folding'],
+      highlights: ['Cell Structure', 'Organelle Function', 'Molecular Processes'],
       color: 'bg-green-100 text-green-600 border-green-200'
     },
     {
-      title: 'Microbiology & Immunology',
-      code: 'MIC 310',
-      description: 'Study of microorganisms, immune system responses, and pathogen-host interactions',
-      semester: 'Spring 2023',
+      title: 'Bioanalytics 1',
+      germanTitle: 'Bioanalytik 1',
+      description: 'Introduction to analytical techniques and instrumentation used in biological research and biotechnology applications',
+      semester: 'Spring 2024',
       credits: 4,
-      highlights: ['Bacterial Cultures', 'Immune Response', 'Pathogen Analysis'],
+      highlights: ['Analytical Methods', 'Laboratory Techniques', 'Data Analysis'],
       color: 'bg-teal-100 text-teal-600 border-teal-200'
     },
     {
-      title: 'Biostatistics & Data Analysis',
-      code: 'STAT 340',
-      description: 'Statistical methods for biological research, data interpretation, and experimental design',
-      semester: 'Fall 2023',
-      credits: 3,
-      highlights: ['Statistical Analysis', 'Research Design', 'Data Visualization'],
+      title: 'Organic Chemistry',
+      germanTitle: 'Organische Chemie',
+      description: 'Comprehensive study of carbon-based compounds, their structures, properties, and reactions essential for biotechnology',
+      semester: 'Spring 2024',
+      credits: 4,
+      highlights: ['Organic Reactions', 'Molecular Structure', 'Chemical Synthesis'],
       color: 'bg-indigo-100 text-indigo-600 border-indigo-200'
     },
     {
-      title: 'Genetics & Genomics',
-      code: 'GEN 315',
-      description: 'Principles of heredity, genetic engineering, and modern genomic technologies',
+      title: 'Microbiology 1',
+      germanTitle: 'Mikrobiologie 1',
+      description: 'Fundamental principles of microbiology including bacterial, viral, and fungal organisms and their applications',
       semester: 'Spring 2024',
       credits: 4,
-      highlights: ['CRISPR Technology', 'Genome Sequencing', 'Genetic Mapping'],
+      highlights: ['Microbial Growth', 'Pathogen Identification', 'Sterilization Methods'],
       color: 'bg-rose-100 text-rose-600 border-rose-200'
+    },
+    {
+      title: 'Physics: Electricity and Optics',
+      germanTitle: 'Physik Elektrizitätslehre und Optiks',
+      description: 'Physical principles of electrical circuits, electromagnetic fields, and optical systems used in biotechnology equipment',
+      semester: 'Spring 2024',
+      credits: 3,
+      highlights: ['Circuit Analysis', 'Electromagnetic Theory', 'Optical Instruments'],
+      color: 'bg-purple-100 text-purple-600 border-purple-200'
+    },
+    {
+      title: 'Mathematics',
+      germanTitle: 'Mathematik',
+      description: 'Essential mathematical concepts including calculus, statistics, and data analysis for biotechnology applications',
+      semester: 'Spring 2024',
+      credits: 3,
+      highlights: ['Calculus', 'Statistics', 'Data Interpretation'],
+      color: 'bg-blue-100 text-blue-600 border-blue-200'
+    },
+    {
+      title: 'General Studies',
+      germanTitle: 'Technical English, Oral Communication in English',
+      description: 'Development of English language skills for scientific communication, technical writing, and professional presentations',
+      semester: 'Spring 2024',
+      credits: 2,
+      highlights: ['Scientific Communication', 'Technical Writing', 'Presentation Skills'],
+      color: 'bg-orange-100 text-orange-600 border-orange-200'
     }
   ];
 
@@ -63,10 +90,9 @@ export default function BiotechSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Biotechnology Journey</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Pursuing my passion for science and innovation through biotechnology 
-            studies in Berlin. 
+            Pursuing my passion for this constantly evolving field through my studies. 
             Combining theoretical knowledge with practical laboratory experience to 
-            understand the fascinating world of molecular biology and its applications.
+            understand the fascinating world of biotechnology and its applications.
           </p>
         </div>
 
@@ -100,7 +126,7 @@ export default function BiotechSection() {
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
                           <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                            {course.code}
+                            {course.germanTitle}
                           </span>
                         </div>
                         <h4 className="text-2xl font-bold text-gray-800 mb-2">{course.title}</h4>

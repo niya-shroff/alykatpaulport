@@ -11,8 +11,9 @@ export default function Footer() {
               Aly Paul
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Multi-passionate creative bringing authentic stories to life through music, 
-              video, written word, science, and handmade crafts. Let's create something amazing together.
+              Multi-passionate creative bringing authentic stories to life through content, music, 
+              blogging, and handmade crocheting while pursuing studies in Berlin and starting 
+              a career in Biotechnology.
             </p>
           </div>
           

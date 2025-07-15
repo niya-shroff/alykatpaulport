@@ -14,8 +14,8 @@ export default function CrochetSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Crocheting</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover the therapeutic art of crochet through my handmade creations. From cozy blankets 
-            to adorable amigurumi, I find joy in creating beautiful, functional pieces that bring 
+            Discover the therapeutic art of crochet through my handmade creations. From cozy scarfs
+            to cute tops, I find joy in creating beautiful, functional pieces that bring 
             warmth and happiness to everyday life.
           </p>
         </div>

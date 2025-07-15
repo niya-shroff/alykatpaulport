@@ -63,8 +63,8 @@ export default function Contact() {
             Let's Work Together
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to collaborate? Whether you're looking for UGC content, brand partnerships, 
-            custom crochet pieces, or just want to connect, I'd love to hear from you.
+            Ready to collaborate? Whether you're looking for content creation, brand partnerships, 
+            travel advice, or custom crochet pieces or just want to say hello, please fill out the form below!
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function Contact() {
             {/* Contact Type Selection */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-4">
-                I am reaching out as:
+                I am reaching out as/for:
               </label>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <button
