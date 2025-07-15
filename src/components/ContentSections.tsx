@@ -314,24 +314,24 @@ export default function ContentSections() {
 
   const photographyHighlights = [
     {
-      location: 'Berlin, Germany',
-      image: 'https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg?auto=compress&cs=tinysrgb&w=600',
+      location: 'Taipei 101',
+      image: 'src/assets/Taipei.jpg',
       description: 'Urban architecture and city life'
     },
     {
-      location: 'Malaysian Landscapes',
-      image: 'https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Natural beauty and tropical scenes'
+      location: 'Taiwan',
+      image: 'src/assets/Taiwan.jpg',
+      description: 'Streetlife and cultural essence'
     },
     {
-      location: 'European Adventures',
-      image: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Historic cities and cultural moments'
+      location: 'Mount Kinabalu',
+      image: 'src/assets/Mount Kinabalu.jpg',
+      description: 'Highest mountain in Malaysia and Borneo'
     },
     {
-      location: 'Street Photography',
-      image: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600',
-      description: 'Candid moments and urban stories'
+      location: 'Bukit Bintang',
+      image: 'src/assets/Bukit Bintang.jpg',
+      description: 'Retail belt in Kuala Lumpur, Malaysia'
     }
   ];
 
@@ -346,7 +346,7 @@ export default function ContentSections() {
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4 border border-pink-200">
                   <Camera className="w-6 h-6 text-pink-600" />
                 </div>
-                <h2 className="text-4xl font-bold text-gray-800">UGC Content Creation</h2>
+                <h2 className="text-4xl font-bold text-gray-800">Content Creation</h2>
               </div>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 I specialize in creating authentic user-generated content that converts. 

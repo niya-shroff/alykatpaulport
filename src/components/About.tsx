@@ -1,4 +1,3 @@
-import React from 'react';
 import { Music, Camera, PenTool, Microscope } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 
@@ -12,7 +11,7 @@ export default function About() {
     },
     {
       icon: Camera,
-      title: 'UGC Creation',
+      title: 'Content Creation',
       description: 'Crafting authentic user-generated content for brands, turning products into compelling stories.',
       color: 'bg-pink-100 text-pink-600 border-pink-200'
     },
@@ -39,21 +38,6 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
-            About Me
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Hi, I'm Aly! I'm a Malaysian student studying Biotechnology at 
-              the Berlin University of Applied Science and Technology in Germany.
-              While I'm passionate about STEM, I'm also a creative at heart—I love 
-              expressing myself through music, photography, content creation, writing 
-              and crocheting. For me, it's all about telling real stories and connecting 
-              with people in a meaningful way!
-            </p>
-          </div>
-        </div>
 
         {/* Creative Passions */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

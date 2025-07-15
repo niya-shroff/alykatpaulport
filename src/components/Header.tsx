@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, Music, Camera, BookOpen, Mail, Microscope } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 
@@ -8,7 +8,7 @@ export default function Header() {
   const navItems = [
     { name: 'About', href: '#about', icon: BookOpen },
     { name: 'Biotech', href: '#biotechnology', icon: Microscope },
-    { name: 'UGC', href: '#ugc', icon: Camera },
+    { name: 'Content', href: '#ugc', icon: Camera },
     { name: 'Music', href: '#music', icon: Music },
     { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'Crochet', href: '#crocheting', icon: YarnBallIcon },
