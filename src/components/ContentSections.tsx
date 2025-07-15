@@ -1,5 +1,9 @@
 import React from 'react';
 import { Music, Youtube, Camera, BookOpen, ExternalLink, Play, Eye, Heart, Clock, Radio, Instagram, MapPin, Star, Users } from 'lucide-react';
+import taipeiImg from '../assets/Taipei.jpg';
+import taiwanImg from '../assets/Taiwan.jpg';
+import kinabaluImg from '../assets/Mount Kinabalu.jpg';
+import bukitImg from '../assets/Bukit Bintang.jpg';
 
 interface BlogPost {
   ID: number;
@@ -315,22 +319,22 @@ export default function ContentSections() {
   const photographyHighlights = [
     {
       location: 'Taipei 101',
-      image: 'src/assets/Taipei.jpg',
+      image: taipeiImg,
       description: 'Urban architecture and city life'
     },
     {
       location: 'Taiwan',
-      image: 'src/assets/Taiwan.jpg',
+      image: taiwanImg,
       description: 'Streetlife and cultural essence'
     },
     {
       location: 'Mount Kinabalu',
-      image: 'src/assets/Mount Kinabalu.jpg',
+      image: kinabaluImg,
       description: 'Highest mountain in Malaysia and Borneo'
     },
     {
       location: 'Bukit Bintang',
-      image: 'src/assets/Bukit Bintang.jpg',
+      image: bukitImg,
       description: 'Retail belt in Kuala Lumpur, Malaysia'
     }
   ];
