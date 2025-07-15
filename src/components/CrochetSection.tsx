@@ -1,38 +1,7 @@
-import React from 'react';
-import { Palette, Gift, Star, ExternalLink, ShoppingBag, Camera } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 
 export default function CrochetSection() {
-  const crochetSkills = [
-    {
-      icon: Palette,
-      title: 'Color Work',
-      description: 'Mastering complex color patterns and gradient techniques',
-      color: 'bg-purple-100 text-purple-600 border-purple-200'
-    },
-    {
-      icon: Gift,
-      title: 'Custom Pieces',
-      description: 'Designing personalized items for special occasions and gifts',
-      color: 'bg-rose-100 text-rose-600 border-rose-200'
-    },
-    {
-      icon: YarnBallIcon,
-      title: 'Pattern Design',
-      description: 'Creating original patterns and sharing techniques with the community',
-      color: 'bg-indigo-100 text-indigo-600 border-indigo-200'
-    }
-  ];
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-500';
-      case 'Intermediate': return 'bg-yellow-500';
-      case 'Advanced': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
-
   return (
     <section id="crocheting" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

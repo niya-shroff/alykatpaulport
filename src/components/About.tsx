@@ -1,4 +1,3 @@
-import React from 'react';
 import { Music, Camera, PenTool, Microscope } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 

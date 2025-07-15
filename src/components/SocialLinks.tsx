@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram, Music, ExternalLink } from 'lucide-react';
 
 export default function SocialLinks() {

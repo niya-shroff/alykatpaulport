@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Microscope, Dna, FlaskConical, Atom, BookOpen, ExternalLink, GraduationCap, Beaker, ChevronLeft, ChevronRight, Award } from 'lucide-react';
+import { useState } from 'react';
+import { Microscope, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function BiotechSection() {
   const [currentCourse, setCurrentCourse] = useState(0);

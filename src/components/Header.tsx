@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, Music, Camera, BookOpen, Mail, Microscope } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 

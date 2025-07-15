@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram, Music, Youtube, Mail, User, Camera, BookOpen, Microscope } from 'lucide-react';
 import YarnBallIcon from './YarnBallIcon';
 
